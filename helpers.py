@@ -1,4 +1,6 @@
 from random import choice
+
+
 def read_word_list(txt_file):
     try:
         with open(txt_file, mode="r") as file:
@@ -13,3 +15,7 @@ def read_word_list(txt_file):
     except Exception as e:
         print(type(e), e)
         quit()
+
+
+def valid_guess(guess):
+    return isinstance(guess, str) and len(guess) == 5
